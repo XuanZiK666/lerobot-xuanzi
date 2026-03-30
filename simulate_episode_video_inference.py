@@ -11,7 +11,6 @@ from typing import Any
 import numpy as np
 import torch
 
-# 关键：确保优先导入当前仓库源码（/home/woan/lerobot/src）
 REPO_ROOT = Path(__file__).resolve().parent
 SRC_ROOT = REPO_ROOT / "src"
 if SRC_ROOT.is_dir() and str(SRC_ROOT) not in sys.path:
@@ -379,9 +378,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-# python /home/woan/lerobot/simulate_episode_video_inference.py --max-frames 290 --episode-index 0 --model-path /home/woan/lerobot/output_lerobot_train/act/checkpoints/030000 --export-compare-video /mnt/output_lerobot_train/act/compare_ep0_full.mp4
-
-# python /home/woan/lerobot/simulate_episode_video_inference.py --max-frames 290 --episode-index 0 --model-path /home/woan/lerobot/output_lerobot_train/amolvla_A/checkpoints/020000 --export-compare-video /mnt/output_lerobot_train/smolvla/compare_ep0_full.mp4
-
-# python /mnt/workspace/lerobot-xuanzi/simulate_episode_video_inference.py --max-frames 290 --episode-index 10 --model-path /mnt/workspace/lerobot-xuanzi/output_lerobot_train/smolvla_A/checkpoints/020000 --export-compare-video /mnt/output_lerobot_train/smolvla/compare_ep0_full.mp4
